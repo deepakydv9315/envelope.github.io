@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    text-align: center;
+    background-color: #dce4df;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope{
+    min-width: 298px;
+    max-width: 298px;
+    height: 184px;
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    background-color: #fcf6e2;
+    box-shadow: 0 0.1em 1em rgba(0, 0, 0, 0.15);
+}
+
+
+.envelope .triangle{
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.envelope .triangle::before{
+    content: " ";
+    top: -86px;
+    left: 61px;
+    position: absolute;
+    display: inline-block;
+    width: 181px;
+    height: 163px;
+    border: 1px solid rgba(255, 255, 255, 0.527);
+    background-color: #fbf5dd;
+    transform: rotateZ(30deg) skew(-30deg);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.14);
+}
+
+.envelope .triangle.cap{
+    transform-origin: 50% 0%;
+    z-index: 4;
+}
+.envelope .triangle.tail{
+    transform-origin: 50% 0%;
+    transform: rotate(180deg);
+    z-index: 3;
+}
+
+@media (max-width:323px) {
+    .envelope{
+        transform: scale(0.7);
+    }
+}
